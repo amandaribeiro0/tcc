@@ -1,0 +1,212 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/migration": {
+      "get": {
+        "description": "Migração da estrutura do banco de dados do projeto",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/login": {
+      "post": {
+        "description": "Autenticação de usuário",
+        "parameters": [
+          {
+            "name": "email",
+            "description": "Email cadastrado pelo usuário",
+            "required": true,
+            "in": "body",
+            "example": "fulaninho.sobrenome@senaisp.xxx.com",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "password",
+            "description": "Senha cadastrada pelo usuário",
+            "required": true,
+            "in": "body",
+            "example": "123456#senha",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/register": {
+      "post": {
+        "description": "Criação de usuário",
+        "parameters": [
+          {
+            "name": "name",
+            "description": "Nome do usuário",
+            "required": true,
+            "in": "body",
+            "example": "Fulaninho (nome) da Silva (Sobrenome)",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "image",
+            "description": "Imagem do usuário, enviado por um input type file",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "office",
+            "description": "Cargo do usuário, admin ou docente",
+            "required": true,
+            "in": "body",
+            "example": "docente",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "email",
+            "description": "Email cadastrado pelo usuário",
+            "required": true,
+            "in": "body",
+            "example": "fulaninho.sobrenome@senaisp.xxx.com",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "password",
+            "description": "Senha cadastrada pelo usuário",
+            "required": true,
+            "in": "body",
+            "example": "123456#senha",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/update": {
+      "put": {
+        "description": "Atualização de usuário",
+        "parameters": [
+          {
+            "name": "token",
+            "description": "Token do usuário",
+            "type": "string",
+            "required": true,
+            "in": "header",
+            "example": "X-Access-Token: <token>"
+          },
+          {
+            "name": "name",
+            "description": "Nome do usuário (principal dado)",
+            "required": true,
+            "in": "body",
+            "example": "Fulaninho (nome) da Silva (Sobrenome)",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "image",
+            "description": "Imagem do usuário, enviado por um input type file",
+            "required": true,
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "office",
+            "description": "Cargo do usuário, admin ou docente",
+            "required": true,
+            "in": "body",
+            "example": "docente",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "email",
+            "description": "Email cadastrado pelo usuário",
+            "required": true,
+            "in": "body",
+            "example": "fulaninho.sobrenome@senaisp.xxx.com",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          {
+            "name": "password",
+            "description": "Senha cadastrada pelo usuário",
+            "required": true,
+            "in": "body",
+            "example": "123456#senha",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/delete": {
+      "delete": {
+        "description": "Remoção de usuário",
+        "parameters": [
+          {
+            "name": "token",
+            "description": "Token do usuário",
+            "type": "string",
+            "required": true,
+            "in": "header",
+            "example": "X-Access-Token: <token>"
+          },
+          {
+            "name": "name",
+            "description": "Nome do usuário",
+            "type": "string",
+            "required": true,
+            "in": "query",
+            "example": "Fulaninho (nome) da Silva (Sobrenome)"
+          }
+        ],
+        "responses": {}
+      }
+    }
+  }
+}

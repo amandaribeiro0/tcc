@@ -1,0 +1,21 @@
+{
+  "name": "tcc-teste",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "[",
+  "scripts": {
+    "start": "nodemon start",
+    "swagger_autogen":"node swagger.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19",
+    "sequelize": "^6.21.4",
+    "swagger-autogen": "^2.21.5",
+    "swagger-ui-express": "^4.5.0"
+  }
+}
